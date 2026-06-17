@@ -155,6 +155,7 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_BTN_somaActionPerformed
 
     private void BTN_multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_multiplicacaoActionPerformed
+        //Sou um idiota por favor me perdoe professor e não zere toda minha notinha ;(, sem querer mandei os dois em um commit só
         try {
             double num1 = Double.parseDouble(TXT_num1.getText());
             double num2 = Double.parseDouble(TXT_num2.getText());
@@ -179,6 +180,7 @@ public class Calculadora extends javax.swing.JFrame {
            
         }catch(NumberFormatException e){
             TXT_resultado.setText("Digite apenas numeros!");
+            //
         }
     }//GEN-LAST:event_BTN_subtracaoActionPerformed
 

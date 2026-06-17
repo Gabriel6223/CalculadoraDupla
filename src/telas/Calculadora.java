@@ -55,6 +55,11 @@ public class Calculadora extends javax.swing.JFrame {
         });
 
         BTN_subtracao.setText("Subtração");
+        BTN_subtracao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTN_subtracaoActionPerformed(evt);
+            }
+        });
 
         BTN_multiplicacao.setText("Multiplicação");
         BTN_multiplicacao.addActionListener(new java.awt.event.ActionListener() {
@@ -162,6 +167,20 @@ public class Calculadora extends javax.swing.JFrame {
             TXT_resultado.setText("Digite apenas numeros!");
         }
     }//GEN-LAST:event_BTN_multiplicacaoActionPerformed
+
+    private void BTN_subtracaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_subtracaoActionPerformed
+        try {
+            double num1 = Double.parseDouble(TXT_num1.getText());
+            double num2 = Double.parseDouble(TXT_num2.getText());
+            
+            double resultado = num1 - num2;
+            
+            TXT_resultado.setText(String.valueOf(resultado));
+           
+        }catch(NumberFormatException e){
+            TXT_resultado.setText("Digite apenas numeros!");
+        }
+    }//GEN-LAST:event_BTN_subtracaoActionPerformed
 
     /**
      * @param args the command line arguments

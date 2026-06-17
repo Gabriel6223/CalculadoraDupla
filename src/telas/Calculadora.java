@@ -155,11 +155,15 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_BTN_somaActionPerformed
 
     private void BTN_multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_multiplicacaoActionPerformed
+<<<<<<< HEAD
         //Sou um idiota por favor me perdoe professor e não zere toda minha notinha ;(, sem querer mandei os dois em um commit só
+=======
+        //Sou um idiota por favor me perdoe professor e não zere toda minha notinha ;(, sem querer mandei os dois em um commit só.
+>>>>>>> f2a0ae57f3a14c84094368de761e9f5487e1e315
         try {
             double num1 = Double.parseDouble(TXT_num1.getText());
             double num2 = Double.parseDouble(TXT_num2.getText());
-            
+            //
             double resultado = num1 * num2;
             
             TXT_resultado.setText(String.valueOf(resultado));

@@ -48,10 +48,20 @@ public class Calculadora extends javax.swing.JFrame {
         jLabel3.setText("Numero 2");
 
         BTN_soma.setText("Soma");
+        BTN_soma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTN_somaActionPerformed(evt);
+            }
+        });
 
         BTN_subtracao.setText("Subtração");
 
         BTN_multiplicacao.setText("Multiplicação");
+        BTN_multiplicacao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BTN_multiplicacaoActionPerformed(evt);
+            }
+        });
 
         BTN_divisao.setText("Divisão");
 
@@ -71,15 +81,15 @@ public class Calculadora extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(18, 18, 18)
-                        .addComponent(TXT_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TXT_resultado, javax.swing.GroupLayout.PREFERRED_SIZE, 215, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(BTN_soma)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel2)
                                 .addComponent(TXT_num1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(BTN_multiplicacao))
+                            .addComponent(BTN_multiplicacao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(BTN_soma, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -89,9 +99,9 @@ public class Calculadora extends javax.swing.JFrame {
                                 .addContainerGap(152, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(BTN_subtracao)
-                                    .addComponent(BTN_divisao))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(BTN_subtracao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(BTN_divisao, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))))
         );
         layout.setVerticalGroup(
@@ -124,6 +134,34 @@ public class Calculadora extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void BTN_somaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_somaActionPerformed
+        try {
+            double num1 = Double.parseDouble(TXT_num1.getText());
+            double num2 = Double.parseDouble(TXT_num2.getText());
+            
+            double resultado = num1 + num2;
+            
+            TXT_resultado.setText(String.valueOf(resultado));
+           
+        }catch(NumberFormatException e){
+            TXT_resultado.setText("Digite apenas numeros!");
+        }
+    }//GEN-LAST:event_BTN_somaActionPerformed
+
+    private void BTN_multiplicacaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTN_multiplicacaoActionPerformed
+        try {
+            double num1 = Double.parseDouble(TXT_num1.getText());
+            double num2 = Double.parseDouble(TXT_num2.getText());
+            
+            double resultado = num1 * num2;
+            
+            TXT_resultado.setText(String.valueOf(resultado));
+           
+        }catch(NumberFormatException e){
+            TXT_resultado.setText("Digite apenas numeros!");
+        }
+    }//GEN-LAST:event_BTN_multiplicacaoActionPerformed
 
     /**
      * @param args the command line arguments

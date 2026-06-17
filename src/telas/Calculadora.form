@@ -34,17 +34,17 @@
                   <Group type="102" attributes="0">
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="TXT_resultado" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="TXT_resultado" min="-2" pref="215" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" attributes="0">
-                          <Component id="BTN_soma" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                               <Component id="TXT_num1" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           </Group>
-                          <Component id="BTN_multiplicacao" min="-2" max="-2" attributes="0"/>
+                          <Component id="BTN_multiplicacao" max="32767" attributes="0"/>
+                          <Component id="BTN_soma" alignment="1" max="32767" attributes="0"/>
                       </Group>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
@@ -57,9 +57,9 @@
                           </Group>
                           <Group type="102" attributes="0">
                               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="BTN_subtracao" alignment="0" min="-2" max="-2" attributes="0"/>
-                                  <Component id="BTN_divisao" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="BTN_subtracao" max="32767" attributes="0"/>
+                                  <Component id="BTN_divisao" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="32767" attributes="0"/>
                           </Group>
@@ -131,6 +131,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Soma"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTN_somaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BTN_subtracao">
       <Properties>
@@ -141,6 +144,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Multiplica&#xe7;&#xe3;o"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="BTN_multiplicacaoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="BTN_divisao">
       <Properties>
